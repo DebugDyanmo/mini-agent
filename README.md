@@ -134,11 +134,4 @@ curl -X POST http://localhost:8000/agent \
 
 ---
 
-## Extending the System
 
-To add a new tool:
-
-1. Add an `async def my_tool(...)` function in `tools.py`
-2. Register it in `TOOL_REGISTRY`
-3. Update the OpenAI system prompt in `planner.py` to include the new action
-4. The orchestrator picks it up automatically — no other changes needed
